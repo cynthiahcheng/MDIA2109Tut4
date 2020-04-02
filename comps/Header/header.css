@@ -1,0 +1,9 @@
+.header {
+    font-weight:bold;
+    font-family:helvetica;
+    cursor:pointer;
+}
+
+.header_inner {
+    padding:10px;
+}
