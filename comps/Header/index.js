@@ -5,12 +5,12 @@
 import React from 'react';
 import './header.css';
 
-const Header = ({fontSize, color, onMouseOver}) => <div
-    style={{backgroundColor:color, fontSize:fontSize}}
-    className="header"
-    onMouseOver={MouseOver}
+const Header = ({text, fontSize, color, onMouseOver}) => <div
+    // style={{backgroundColor:color, fontSize:fontSize}}
+    // className="header"
+    // onMouseOver={MouseOver}
     >
-    <h1 className="header_inner">Header</h1>
+    <h1 style={{fontSize:fontSize}}>{text}</h1>
 </div> 
 
 function MouseOver(){
@@ -20,7 +20,8 @@ function MouseOver(){
 Header.defaultProps={
     fontSize:12,
     color:"#000",
-    onMouseOver:MouseOver
+    onMouseOver:MouseOver,
+    text:"Header"
 }
 
 export default Header;
