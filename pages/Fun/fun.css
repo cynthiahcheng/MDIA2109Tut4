@@ -1,0 +1,28 @@
+#fun_stuff {
+    position:relative;
+    right:0;
+    opacity:1;
+    transition:opacity 1s, right 1.5s;
+}
+
+.animal_icons {
+    display:flex;
+}
+
+.inner_icon {
+    margin:10px;
+}
+
+#snake_icon {
+    width:50px;
+    height:50px;
+}
+
+#hiss {
+    position:absolute;
+    right:0;
+    top:0;
+    font-size:60pt;
+    font-weight:bold;
+
+}

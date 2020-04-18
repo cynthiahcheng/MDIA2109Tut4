@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './chatpage.css';
 import Chat from '../../comps/Chat';
 import CustomButton from '../../comps/CustomButton';
@@ -20,7 +20,14 @@ const ChatPage = ({}) => {
     const [color, setColor] = useState("#CC4E4E");
     const [text, setText] = useState("Cancel");
 
-    return <div>
+    useEffect(()=>{
+        setTimeout(()=>{
+            document.querySelector("#chatpage").style.left=0;
+        }, 50);
+    }, []);
+
+
+    return <div id="chatpage">
         <div id="welcome">
             <Header fontSize={32} text={welcome} />
         </div>
@@ -32,9 +39,9 @@ const ChatPage = ({}) => {
             <Chat img={"https://i7.pngguru.com/preview/234/79/830/robotics-technology-computer-icons-internet-bot-robotics.jpg"} name={"Chat Bot"} backgroundColor={"#FAB"} msg={resp} />
         </div>
         <div id="controls">
-            <Input onClick={(val)=>{
-                setMsg(val);
-                var new_resp = checkResponse(val);
+            <Input onClick={(cynthia)=>{
+                setMsg(cynthia);
+                var new_resp = checkResponse(cynthia);
                 setResp(new_resp);
                 /*if(val === "hi"){
                     setResp("I love pie");
